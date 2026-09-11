@@ -183,32 +183,6 @@ fbq('track', 'PageView');
   .who span { color: var(--muted); font-size: 0.875rem; }
   .who .stars { margin-left: auto; font-size: 0.875rem; }
 
-  /* ---------- What happens next ---------- */
-  .next { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .timeline { list-style: none; margin: 0; padding: 0; counter-reset: s; }
-  .timeline li { position: relative; padding: 0 0 32px 56px; counter-increment: s; }
-  .timeline li::before {
-    content: counter(s);
-    position: absolute; left: 0; top: -2px;
-    width: 34px; height: 34px; border-radius: 10px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    display: grid; place-items: center;
-    font-family: var(--display); font-weight: 600; font-size: 0.9375rem;
-    color: var(--accent);
-  }
-  .timeline li:not(:last-child)::after {
-    content: ""; position: absolute; left: 17px; top: 38px; bottom: 6px; width: 1px; background: var(--line);
-  }
-  .timeline h3 { font-family: var(--display); font-weight: 600; font-size: 1.0625rem; margin: 0 0 4px; }
-  .timeline p { color: var(--muted); margin: 0; }
-  .founders { display: flex; gap: 14px; align-items: center; margin-top: 8px; }
-  .founders .faces { display: flex; }
-  .founders .faces img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg); }
-  .founders .faces img + img { margin-left: -12px; }
-  .founders p { margin: 0; color: var(--muted); font-size: 0.9375rem; }
-  .founders strong { color: var(--text); font-weight: 600; }
-
   /* ---------- Booking ---------- */
   .booking { text-align: center; scroll-margin-top: 16px; }
   .booking h2.section-title { margin-inline: auto; }
@@ -232,7 +206,6 @@ fbq('track', 'PageView');
 
   /* ---------- Responsive ---------- */
   @media (max-width: 960px) {
-    .next { grid-template-columns: 1fr; gap: 40px; }
     .videos { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
     .stats { grid-template-columns: 1fr 1fr; }
     .stat:nth-child(3) { border-left: 0; padding-left: 0; }
@@ -349,37 +322,6 @@ fbq('track', 'PageView');
           </div>
         </article>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== What happens next ===== -->
-  <section aria-labelledby="next-title">
-    <div class="wrap next">
-      <div>
-        <h2 class="section-title" id="next-title">What happens after you book.</h2>
-        <p class="section-lede" style="margin-bottom:28px">No sales script. You'll speak with one of the two people who'd actually be building your system.</p>
-        <div class="founders">
-          <div class="faces">
-            <img src="pfp1.png" alt="Christopher Schaeken" loading="lazy" width="48" height="48">
-            <img src="max.jpg" alt="Max Brock" loading="lazy" width="48" height="48">
-          </div>
-          <p><strong>Christopher &amp; Max</strong><br>Co-founders, Ascension Software</p>
-        </div>
-      </div>
-      <ol class="timeline">
-        <li>
-          <h3>Pick a time</h3>
-          <p>Choose a 30-minute slot below and answer a few quick questions about your brand. No back-and-forth emails.</p>
-        </li>
-        <li>
-          <h3>We audit your email first</h3>
-          <p>Before the call we go through your flows, campaigns, and signup forms to find where revenue is slipping.</p>
-        </li>
-        <li>
-          <h3>You get the plan</h3>
-          <p>On the call we show you what we'd fix, what we'd build first, and what it should add. No commitment either way.</p>
-        </li>
-      </ol>
     </div>
   </section>
 
